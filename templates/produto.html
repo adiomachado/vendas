@@ -1,0 +1,10 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+    <h2>Lista de Produtos</h2>
+    <ul style="font-size: 18px">
+        {% for produto in produtos %}
+        <li>{{ produto.nome }} - {{ produto.get_data_cadastro }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
